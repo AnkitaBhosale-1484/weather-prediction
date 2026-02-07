@@ -14,7 +14,8 @@ st.set_page_config(
 )
 
 # ---------------- Load Model ----------------
-model = joblib.load("model/temperature_model.pkl")
+model = joblib.load("temperature_model.pkl")
+
 
 # ---------------- Session State ----------------
 if "page" not in st.session_state:
@@ -196,4 +197,5 @@ if st.session_state.page == "result":
 
     if st.button("⬅️ Back to Input Page"):
         st.session_state.page = "input"
+
         st.rerun()
